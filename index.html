@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner Joy</title>
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- 🔹 Estilos de Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <!-- 🔷 Encabezado -->
+  <header>
+    <div class="logo">
+      <img src="Imagenes/logo.jpg" alt="Logo">
+      <h1>Inner Joy</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="innerjoy.html">Inner joy</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-buttons">
+      <a href="en-construccion.html" class="btn azul">Iniciar Sesión</a>
+      <a href="en-construccion.html" class="btn marino">Crear cuenta</a>
+    </div>
+  </header>
+
+  <!-- 🎠 Sección con slider + artículo -->
+  <section class="highlight-section">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="Imagenes/slider1.jpg" alt="Apoyo emocional"></div>
+        <div class="swiper-slide"><img src="Imagenes/slider2.jpg" alt="Comunidad"></div>
+        <div class="swiper-slide"><img src="Imagenes/slider3.jpg" alt="Crecimiento personal"></div>
+      </div>
+      <!-- Controles del Swiper -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- 📘 Artículo informativo -->
+    <aside class="info-article">
+      <h3>Importancia del bienestar mental</h3>
+      <p>
+        Las condiciones de salud mental son más comunes de lo que solemos pensar.
+        Según la <strong>Organización Mundial de la Salud (OMS)</strong>, más de 
+        <strong>1 000 millones de personas</strong> en el mundo viven con algún tipo 
+        de enfermedad mental. La promoción del bienestar emocional y el acceso a 
+        apoyo psicológico son fundamentales para prevenir y tratar estos trastornos.
+      </p>
+      <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+         target="_blank"
+         class="btn green-btn">
+        Más información
+      </a>
+    </aside>
+  </section>
+
+  <!-- 🔹 Sección principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Plataforma web para el apoyo y acompañamiento de estudiantes y trabajadores con depresión, ansiedad social y TDAH</h2>
+      <p>Nuestro propósito es acompañarte y orientarte en tu camino hacia el bienestar.
+Sabemos que enfrentar la depresión, la ansiedad social o el TDAH puede ser un desafío, pero no tienes que hacerlo solo.
+En Inner Joy encontrarás apoyo, comprensión y herramientas para avanzar a tu ritmo.</p>
+    </div>
+  </section>
+
+  <!-- 🔸 Sección de tarjetas -->
+  <section class="cards">
+    <div class="card green">
+      <h3>Nosotros!</h3>
+      <p>Aquí podrás saber quiénes somos, qué nos motivó a hacer este proyecto, y conocer nuestra misión y visión.</p>
+      <a href="nosotros.html" class="btn green-btn">Nosotros! →</a>
+    </div>
+
+    <div class="card blue">
+      <h3>Inner joy!</h3>
+      <p>Aquí sabrás sobre nuestras estrategias, lo que ofrecemos, lo que hacemos y cómo lo hacemos.</p>
+      <a href="innerjoy.html" class="btn blue-btn">Inner joy! →</a>
+    </div>
+
+    <div class="card orange">
+      <h3>Contacto!</h3>
+      <p>Para cualquier duda o apoyo que nos quieras brindar, no dudes en comunicarte con nosotros.</p>
+      <a href="contacto.html" class="btn orange-btn">Contacto! →</a>
+    </div>
+  </section>
+
+  <!-- 🔻 Pie de página -->
+  <footer>
+    <p>2025 Inner Joy Project - For educational purposes only.</p>
+  </footer>
+
+  <!-- 🔹 Script de Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: true,
+      autoplay: {
+        delay: 10000, // espera 10 segundos entre cambios
+        disableOnInteraction: false,
+      },
+      speed: 4000, // la animación dura 4 segundos
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  </script>
+
+</body>
+</html>
